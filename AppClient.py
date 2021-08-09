@@ -14,7 +14,7 @@ boston = pd.DataFrame(db.data, columns=db.feature_names)
 
 X = db.data
 y = db.target
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=5)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.1, random_state=5)
 boston.head()
 
 # COMMAND ----------
@@ -37,3 +37,11 @@ def score_model(dataset):
   return response.json()
 
 score_model(X_test)
+
+# COMMAND ----------
+
+X_test
+
+# COMMAND ----------
+
+
